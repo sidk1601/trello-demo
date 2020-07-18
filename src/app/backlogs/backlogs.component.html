@@ -1,0 +1,13 @@
+<div class="container" style="border: 1px solid #eee;">
+  <h3>Backlogs</h3>
+  <hr />
+  <div class="row">
+    <div class="col-xs-12">
+      <app-backlog-item
+        *ngFor="let item of backLogs; let i = index"
+        [backlog]="item"
+        (click)="moveToDevelopment(i)"
+      ></app-backlog-item>
+    </div>
+  </div>
+</div>

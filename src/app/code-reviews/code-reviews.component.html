@@ -1,0 +1,13 @@
+<div class="container" style="border: 1px solid #eee;">
+  <h3>Code Reviews</h3>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-code-review-item
+        *ngFor="let item of codeReviews; let i = index"
+        [codeReview]="item"
+        (click)="moveToAcceptance(i)"
+      ></app-code-review-item>
+    </div>
+  </div>
+</div>

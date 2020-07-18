@@ -1,0 +1,12 @@
+<div class="container" style="border: 1px solid #eee;">
+  <h3>Acceptances</h3>
+  <hr />
+  <div class="row">
+    <div class="col-xs-12">
+      <app-acceptance-item
+        *ngFor="let item of acceptances; let i = index"
+        [acceptance]="item"
+      ></app-acceptance-item>
+    </div>
+  </div>
+</div>

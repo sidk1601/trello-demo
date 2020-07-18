@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <button class="btn btn-success" (click)="showForm()" [disabled]="doShowForm">Add Task</button>
+        <form (ngSubmit)="onFormSubmit(f)" #f="ngForm" *ngIf="doShowForm">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" class="form-control" ngModel>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" id="description" name="description" class="form-control" ngModel>
+            </div>
+            <div class="form-group">
+                <label for="date">Due Date</label>
+                <input type="date" id="date" name="date" class="form-control" ngModel>
+            </div>
+            <button class="btn btn-success">Save Task</button>
+        </form>
+    </div>
+</div>
